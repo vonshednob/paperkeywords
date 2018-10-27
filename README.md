@@ -20,3 +20,11 @@ To restore your private key, you need your public key (without ascii armor). The
     > cat paperkeywords | python paperkeywords.py -d | paperkey --pubring pubkey.gpg | gpg --import
 
 That’s it. You recovered your private key.
+
+
+Shorter Words
+-------------
+
+If you don’t like the amount of words you have to write, you can use the `-r` or `--rfc1751` command line option. With this option paperkeyword will use the [RFC1751](https://www.rfc-editor.org/info/rfc1751) word list (or rather the first 512 words thereof) instead of the PGP word list.
+
+When restoring your public key, you must apply the `-r` option again, obviously.
